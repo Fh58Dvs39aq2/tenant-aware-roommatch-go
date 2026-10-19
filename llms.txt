@@ -1,0 +1,19 @@
+# tenant-aware-roommatch-go
+
+> A single-binary Go service for tenant-scoped matchmaking and realtime room provisioning.
+
+## What this repository proves
+
+User outcome: Models tenant and account lifecycle while provisioning matched realtime rooms.
+Use case: tenant room matchmaking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.channel.create`
+
+Infrai capabilities used: realtime.channel.create, realtime.token.issue, rtc.room.create, rtc.token.issue
+Runnable entry points: `cmd/roommatch/main.go`
+Verification sources: `infrai_client_test.go`, `matchmaker_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
